@@ -143,3 +143,60 @@ main hr + p a {
 main hr + p a:hover {
   color: #111111;
 }
+/* ===== PASTE THIS AT THE END OF app/globals.css ===== */
+
+/* Back link on subpages */
+.backlink {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+.backlink a {
+  color: #222222;
+  border-bottom: 0.5px solid #cccccc;
+  text-decoration: none;
+  font-weight: 400;
+}
+.backlink a:hover {
+  border-bottom-color: #111111;
+}
+
+/* Domain section headers on the ydn page */
+.domain {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111111;
+  letter-spacing: -0.01em;
+  margin: 40px 0 14px;
+}
+main p + .domain {
+  margin-top: 8px;
+}
+
+/* Capability bullets on ydn — smaller than the home page.
+   Scoped to lists that follow a .domain header, so the home page is untouched. */
+.domain + ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.domain + ul li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.domain + ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.domain + ul li:last-child {
+  margin-bottom: 0;
+}
