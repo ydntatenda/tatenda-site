@@ -1,38 +1,52 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Signature() {
-  const ref = useRef<HTMLImageElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const [state, setState] = useState<'idle' | 'hidden' | 'drawn'>('idle');
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
+    // If reduced motion, skip the animation entirely
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    // Hide it (no transition), then reveal when it scrolls into view
+    setState('hidden');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('drawn');
+            // Double rAF so the hidden state paints before the transition starts
+            requestAnimationFrame(() =>
+              requestAnimationFrame(() => setState('drawn'))
+            );
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     observer.observe(el);
-
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="signature">
+    <div ref={ref} className="signature">
       <img
-        ref={ref}
-        className="sig-reveal"
+        className={
+          state === 'hidden'
+            ? 'sig-hidden'
+            : state === 'drawn'
+              ? 'sig-drawing'
+              : ''
+        }
         src="/signature.svg"
         alt="Tatenda Ncube-Muchandibaya signature"
         style={{ filter: 'invert(0.55)' }}
