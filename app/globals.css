@@ -30,7 +30,7 @@ body {
 
 main {
   max-width: 680px;
-  margin: 0;
+  margin: 0 auto;
   padding: 80px 32px 56px;
 }
 
@@ -150,7 +150,7 @@ main ul li a:hover {
 .section-label {
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 11px;
-  color: #555555;
+  color: #7a7a7a;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0 0 16px;
@@ -210,7 +210,7 @@ main ul li a:hover {
 .writing-date {
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 11px;
-  color: #555555;
+  color: #7a7a7a;
   white-space: nowrap;
 }
 
@@ -283,14 +283,14 @@ main ul li a:hover {
 .footer-clock {
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 11px;
-  color: #3d3d3d;
+  color: #6f6f6f;
   font-variant-numeric: tabular-nums;
 }
 
 .copyright {
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 11px;
-  color: #3d3d3d;
+  color: #6f6f6f;
 }
 
 /* Back link (ydn page) */
