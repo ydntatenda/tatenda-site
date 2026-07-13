@@ -23,12 +23,8 @@ export default function Signature() {
 
     observer.observe(el);
 
-    // Fallback: if already in view on load, draw after entrance settles
-    const t = setTimeout(() => el.classList.add('drawn'), 900);
-
     return () => {
       observer.disconnect();
-      clearTimeout(t);
     };
   }, []);
 
