@@ -11,8 +11,8 @@ html {
 
 html,
 body {
-  background: #ffffff;
-  color: #111111;
+  background: #0a0a0a;
+  color: #e5e5e5;
 }
 
 body {
@@ -23,129 +23,277 @@ body {
   letter-spacing: -0.01em;
 }
 
+::selection {
+  background: #333333;
+  color: #ffffff;
+}
+
 main {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 80px 32px 64px;
+  max-width: 680px;
+  margin: 0;
+  padding: 80px 32px 56px;
 }
 
 @media (min-width: 768px) {
   main {
-    padding: 96px 56px 80px;
+    padding: 80px 64px 56px;
   }
 }
 
-/* Name — H1 from MDX */
+/* Entrance stagger — every direct child of main rises in sequence */
+main > * {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: rise 0.6s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
+}
+main > *:nth-child(1) { animation-delay: 0.05s; }
+main > *:nth-child(2) { animation-delay: 0.12s; }
+main > *:nth-child(3) { animation-delay: 0.2s; }
+main > *:nth-child(4) { animation-delay: 0.3s; }
+main > *:nth-child(5) { animation-delay: 0.42s; }
+main > *:nth-child(6) { animation-delay: 0.55s; }
+main > *:nth-child(7) { animation-delay: 0.65s; }
+main > *:nth-child(8) { animation-delay: 0.75s; }
+main > *:nth-child(n + 9) { animation-delay: 0.85s; }
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .sig-reveal {
+    transition: none !important;
+    clip-path: none !important;
+  }
+}
+
+/* Name */
 main h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-  color: #111111;
+  color: #fafafa;
   letter-spacing: -0.02em;
-  margin: 0 0 24px;
+  margin: 0 0 36px;
   line-height: 1.2;
 }
 
 /* Bio line — first paragraph after H1 */
 main h1 + p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: #888888;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #9a9a9a;
   margin: 0 0 36px;
 }
 
 /* Regular paragraphs */
 main p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: #222222;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #d4d4d4;
   margin: 0 0 18px;
 }
 
-/* Bullet list */
+/* Bullets */
 main ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0 0 52px;
 }
 
 main ul li {
   position: relative;
-  padding-left: 28px;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #222222;
-  margin-bottom: 18px;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #d4d4d4;
+  margin-bottom: 16px;
 }
 
 main ul li::before {
-  content: '•';
+  content: '·';
   position: absolute;
   left: 0;
   top: 0;
-  color: #cccccc;
-  font-size: 16px;
-  line-height: 1.65;
+  color: #555555;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 main ul li:last-child {
   margin-bottom: 0;
 }
 
-/* Inline links — venture names */
+/* Inline links */
 main p a,
 main ul li a {
-  color: #111111;
+  color: #ffffff;
   font-weight: 500;
   text-decoration: none;
-  border-bottom: 0.5px solid #cccccc;
-  transition: border-color 0.15s ease;
+  border-bottom: 0.5px solid #3a3a3a;
+  transition: border-color 0.2s ease;
 }
 
 main p a:hover,
 main ul li a:hover {
-  border-bottom-color: #111111;
+  border-bottom-color: #aaaaaa;
 }
 
-/* Signature block */
+/* Section label */
+.section-label {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  color: #555555;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+/* Writing list */
+.writing {
+  margin-bottom: 40px;
+}
+
+.writing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 13px 0;
+  border-bottom: 0.5px solid #1d1d1d;
+  gap: 16px;
+  text-decoration: none;
+  transition: padding-left 0.25s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.writing-item:first-of-type {
+  border-top: 0.5px solid #1d1d1d;
+}
+
+.writing-item:hover {
+  padding-left: 8px;
+}
+
+.writing-title {
+  font-size: 15px;
+  color: #d4d4d4;
+  font-weight: 400;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.writing-title .arr {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.2, 0.6, 0.2, 1);
+  font-size: 13px;
+  color: #888888;
+}
+
+.writing-item:hover .writing-title {
+  color: #ffffff;
+}
+
+.writing-item:hover .arr {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.writing-date {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  color: #555555;
+  white-space: nowrap;
+}
+
+/* Signature */
 .signature {
-  margin: 48px 0;
-  display: block;
+  margin: 44px 0 48px;
 }
 
-.signature img {
+.signature img,
+.signature svg {
   display: block;
-  width: 160px;
+  width: 380px;
+  max-width: 100%;
   height: auto;
 }
 
-/* Hairline before contact */
-main hr {
-  border: none;
-  border-top: 0.5px solid #ececec;
-  margin: 0 0 24px;
+.sig-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
 }
 
-/* Contact row — paragraph after the hairline */
-main hr + p {
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-  font-size: 12px;
-  color: #888888;
-  letter-spacing: 0.01em;
-  margin: 0;
+.sig-reveal.drawn {
+  clip-path: inset(0 -2% 0 0);
 }
 
-main hr + p a {
-  color: #222222;
+/* Footer */
+.site-footer {
+  border-top: 0.5px solid #1d1d1d;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.icons a {
+  color: #555555;
+  display: flex;
+  align-items: center;
+  padding: 4px;
   border-bottom: none;
-  font-weight: 400;
+  transition: color 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-main hr + p a:hover {
-  color: #111111;
+.icons a:hover {
+  color: #ffffff;
+  transform: scale(1.25) translateY(-2px);
 }
-/* ===== PASTE THIS AT THE END OF app/globals.css ===== */
 
-/* Back link on subpages */
+.icons svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.footer-clock {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  color: #3d3d3d;
+  font-variant-numeric: tabular-nums;
+}
+
+.copyright {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  color: #3d3d3d;
+}
+
+/* Back link (ydn page) */
 .backlink {
   margin-bottom: 40px;
 }
@@ -154,13 +302,13 @@ main hr + p a:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 0.5px solid #e0e0e0;
+  border: 0.5px solid #2a2a2a;
   border-radius: 20px;
   padding: 5px 12px;
   text-decoration: none;
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 11px;
-  color: #333333;
+  color: #cccccc;
   letter-spacing: 0.04em;
   transition: border-color 0.15s ease;
 }
@@ -168,50 +316,52 @@ main hr + p a:hover {
 .backlink a::before {
   content: '←';
   font-size: 13px;
-  color: #aaaaaa;
+  color: #666666;
   line-height: 1;
 }
 
 .backlink a:hover {
-  border-color: #aaaaaa;
+  border-color: #666666;
 }
 
 /* Domain section headers on the ydn page */
 .domain {
   font-size: 15px;
   font-weight: 500;
-  color: #111111;
+  color: #fafafa;
   letter-spacing: -0.01em;
   margin: 40px 0 14px;
 }
+
 main p + .domain {
   margin-top: 8px;
 }
 
-/* Capability bullets on ydn — smaller than the home page.
-   Scoped to lists that follow a .domain header, so the home page is untouched. */
 .domain + ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .domain + ul li {
   position: relative;
   padding-left: 24px;
   font-size: 14px;
-  line-height: 1.55;
-  color: #333333;
+  line-height: 1.6;
+  color: #b8b8b8;
   margin-bottom: 10px;
 }
+
 .domain + ul li::before {
-  content: '•';
+  content: '·';
   position: absolute;
   left: 0;
   top: 0;
-  color: #cccccc;
-  font-size: 14px;
-  line-height: 1.55;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.5;
 }
+
 .domain + ul li:last-child {
   margin-bottom: 0;
 }

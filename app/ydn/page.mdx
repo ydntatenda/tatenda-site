@@ -1,10 +1,13 @@
+import Signature from '../components/Signature';
+import Footer from '../components/Footer';
+
 <div className="backlink">
   [home](/)
 </div>
 
 # ydn
 
-ydn is the system I built to run my life. It watches every domain at once, holds the full context in one place, and acts without being asked. Everything below is live right now:
+What's 2026 without agents? ydn is the system I built to run my life and keep everything together. It watches every domain at once, holds the full context in one place, and acts without being asked. Everything below is live right now:
 
 <div className="domain">Body</div>
 
@@ -38,9 +41,9 @@ ydn is the system I built to run my life. It watches every domain at once, holds
 - Knows every stakeholder, their status, last touch, next action
 - Tracks every stakeholder touch end-to-end — stage, last contact, open commitments, next action; auto-drafts follow-up emails after calls and flags conversations that have gone cold
 - 30 minutes before any meeting, sends a full brief — who I'm meeting, their background, last conversation summary, open commitments on both sides, and what I need to get out of the room
-- when I forward a bookmark from X, does a deep dive on the full content, sends me a summary of what it's about and exactly how it's relevant to what I'm building, then tags it by domain and stores it — surfacing it again proactively when it matters
 - has coding agents that ship code autonomously. I can prompt them via voice or text, but they also trigger themselves: a call summary mentions a new feature, an investor email implies a product gap, a meeting brief surfaces something unbuilt. The agents write the code, open a pull request, and tag the right person to review.
-- runs an intelligence scan of the internet every morning at 06:15 across multiple domains relevant to any of my startups, surfaces the top signals, and delivers a structured brief to my iMessage before the morning work block.
+- runs an intelligence scan every morning at 06:15 across eight domains relevant to Lattanye, surfaces the top signals, and delivers a structured brief to Telegram before the morning work block.
+- when I forward a bookmark from X, does a deep dive on the full content, sends me a summary of what it's about and exactly how it's relevant to what I'm building, then tags it by domain and stores it — surfacing it again proactively when it matters
 - Has an accomplishment date and tracks if I'm on schedule
 - Surfaces the highest-leverage task for each deep work block, pulled from the ledger
 - Flags stale investor conversations (>14 days no contact)
@@ -64,6 +67,6 @@ ydn is the system I built to run my life. It watches every domain at once, holds
 - Pushes back when I override the template instead of complying
 - Logs every override so Sunday review can surface the pattern
 
-<div className="signature">
-  <img src="/signature.svg" alt="Tatenda Ncube-Muchandibaya signature" />
-</div>
+<Signature />
+
+<Footer />
