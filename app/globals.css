@@ -229,7 +229,7 @@ main ul li a:hover {
 
 .sig-reveal {
   clip-path: inset(0 100% 0 0);
-  transition: clip-path 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
+  transition: clip-path 2.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sig-reveal.drawn {
