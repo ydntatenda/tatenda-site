@@ -163,11 +163,10 @@ main ul li a:hover {
 
 .writing-item {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
   padding: 13px 0;
   border-bottom: 0.5px solid #1d1d1d;
-  gap: 16px;
+  gap: 20px;
   text-decoration: none;
   transition: padding-left 0.25s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
@@ -185,9 +184,25 @@ main ul li a:hover {
   color: #d4d4d4;
   font-weight: 400;
   transition: color 0.2s ease;
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.writing-read {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  color: #7a7a7a;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.clock-icon {
+  width: 12px;
+  height: 12px;
 }
 
 .writing-title .arr {
@@ -205,6 +220,10 @@ main ul li a:hover {
 .writing-item:hover .arr {
   opacity: 1;
   transform: translateX(0);
+}
+
+.writing-item:hover .writing-read {
+  color: #d4d4d4;
 }
 
 .writing-date {
