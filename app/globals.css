@@ -587,3 +587,27 @@ main p + .domain {
 .article-body p a.brand-link:hover {
   border-bottom-color: #aaaaaa;
 }
+
+.byline-role a {
+  color: #b8b8b8;
+  text-decoration: none;
+  border-bottom: 0.5px solid #3a3a3a;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.byline-role a:hover {
+  color: #ffffff;
+  border-bottom-color: #aaaaaa;
+}
+
+
+/* Section titles inline on mobile (the TOC rail is hidden there) */
+.section-title-mobile {
+  display: none;
+}
+
+@media (max-width: 1239px) {
+  .section-title-mobile {
+    display: inline;
+  }
+}
