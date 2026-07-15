@@ -138,7 +138,15 @@ export default function ArticleView() {
 
         {article.sections.map((s) => (
           <section key={s.id} id={s.id} data-section={s.id}>
-            {s.label ? <h2 className="section-numeral">{s.label}</h2> : null}
+            {s.label ? (
+              <h2 className="section-numeral">
+                {s.label}
+                <span className="section-title-mobile">
+                  {' '}
+                  {(s as { title?: string }).title ?? ''}
+                </span>
+              </h2>
+            ) : null}
             {s.paras.map((p, i) => (
               <Para key={i} text={p} />
             ))}
@@ -147,7 +155,7 @@ export default function ArticleView() {
 
         <footer className="article-byline">
           <div className="byline-name">{article.byline[0]}</div>
-          <div className="byline-role">{article.byline[1]}</div>
+          <div className="byline-role"><Linkified text={article.byline[1]} /></div>
         </footer>
       </article>
     </div>
