@@ -138,11 +138,7 @@ export default function ArticleView() {
 
         {article.sections.map((s) => (
           <section key={s.id} id={s.id} data-section={s.id}>
-            {s.label ? (
-              <h2 className="section-numeral">
-                {(s as { title?: string }).title ?? s.label}
-              </h2>
-            ) : null}
+            {s.label ? <h2 className="section-numeral">{s.label}</h2> : null}
             {s.paras.map((p, i) => (
               <Para key={i} text={p} />
             ))}
