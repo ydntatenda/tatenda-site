@@ -397,14 +397,14 @@ main p + .domain {
 @media (min-width: 1240px) {
   .article-page {
     display: grid;
-    grid-template-columns: 180px minmax(0, 640px) 300px;
-    gap: 48px;
-    max-width: 1240px;
+    grid-template-columns: 170px minmax(0, 760px) 320px;
+    gap: 56px;
+    max-width: 1400px;
     margin: 0 auto;
   }
   /* the page main is already max-width 680 — widen for articles */
   main:has(.article-page) {
-    max-width: 1240px;
+    max-width: 1400px;
   }
 }
 
@@ -487,10 +487,10 @@ main p + .domain {
 }
 
 .article-body p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
   color: #c9c9c9;
-  margin: 0 0 22px;
+  margin: 0 0 24px;
 }
 
 /* Citation superscript */
@@ -512,12 +512,13 @@ main p + .domain {
     display: block;
     float: right;
     clear: right;
-    width: 300px;
-    margin-right: -348px;
+    width: 320px;
+    margin-right: -376px;
     margin-bottom: 18px;
     font-size: 12px;
     line-height: 1.65;
     color: #7a7a7a;
+    text-align: center;
   }
 }
 
