@@ -13,11 +13,11 @@ export const article = {
         "The more familiar path for today's startups, in seeking the affection and capital of the Valley, has been to build enterprise or consumer products. To build for the West. We declined to take this approach.",
         "As a result, we continue to face firm questions about the potential profitability and, indeed more fundamentally, the wisdom of our approach. Others are skeptical of what some, not incorrectly, describe as a nonexistent market for artificial intelligence systems.",
         "It is a market they cannot see because they are measuring the wrong thing. Africa has the fastest-growing population in the world. A continent where the median age is barely 20, with more than 60% below 25.{{1}} And with or without invitation, the numbers are simply hard to ignore.",
-        "The question is not whether intelligence comes to this continent. It is who owns it when it arrives. I have no doubt that competent leaders of government and enterprise will, over time, choose sovereign AI over generalized LLMs. That, coupled with a large untapped African market, sets up Lattanye as the pioneer of something special. An understanding of where intelligence creates value, the limits of generalized models, and the future of African Intelligence™ makes this outcome not merely possible, but necessary."
+        "The question is not whether intelligence comes to this continent. It is who owns it when it arrives. I have no doubt that competent leaders of government and enterprise will, over time, choose sovereign AI over generalized LLMs. That, coupled with a large untapped African market, sets up Lattanye as the pioneer of something special. An understanding of where intelligence creates value, the limits of generalized models, and the future of African Intelligence makes this outcome not merely possible, but necessary."
       ]
     },
     {
-      "id": "i",
+      "id": "i", "title": "The Consumer Trap",
       "label": "I.",
       "paras": [
         "Consumer artificial intelligence is a race to serve the average human being alive, and the average human being alive is a statistical figure who resembles no African. That race is essentially over, and it was won by companies whose distribution and capital and models will not be matched on this continent for a generation. The African consumer product is a thin layer stretched over a borrowed model. The model is theirs. The learning is theirs. The value is theirs. Africa performs the work of acquiring the user, absorbs the cost, and surrenders the only thing that compounds. We have lived this story in every commodity we ever pulled from our own ground. We mined the cobalt and queued to buy the phone.{{3}} A continent of wrappers is a continent of middlemen inside its own economy, renting back its own reality and calling the rent progress.",
@@ -25,7 +25,7 @@ export const article = {
       ]
     },
     {
-      "id": "ii",
+      "id": "ii", "title": "Intelligence as a Utility",
       "label": "II.",
       "paras": [
         "If consumer AI is the wrong race, the question becomes which race is the right one. It is anything but inevitable that our most compelling strides as a continent will be defined by our place in the AGI race. And whilst the development contest between frontier large language models puts us at the brink, it will not be the defining moment of our future. Artificial intelligence will redefine the world order only through its impact beyond enterprise and its advancement within the systems that currently run the lives of the general public: revenue, health, energy, and customs.{{5}} There is no question that this has quietly become as vital to our survival, perhaps even more so, as the vanishingly thin enterprise niches the frontier startups are scrambling to squeeze into. It has simply been less fashionable to say so.",
@@ -36,7 +36,7 @@ export const article = {
       ]
     },
     {
-      "id": "iii",
+      "id": "iii", "title": "The LLM Race to Nowhere",
       "label": "III.",
       "paras": [
         "The reason intelligent public systems, not consumer apps, are the real prize for Africans comes down to what a model is and is not. The large language models that have transfixed the world will only be capable of transforming the work of a multinational business or a government's operations if their power is unleashed within the context of a software system that has an opinionated view of the world, its idiosyncratic objects, logic, and physics.",
@@ -48,7 +48,7 @@ export const article = {
       ]
     },
     {
-      "id": "iv",
+      "id": "iv", "title": "Absence Is Not an Answer",
       "label": "IV.",
       "paras": [
         "This is no longer a question of efficiency alone. AI is becoming infrastructure of extraordinary strategic consequence, increasingly embedded in systems of finance, energy, and defence, making it imperative that governments begin to treat it as such. The choice is not whether to let this technology into the machinery of the state. It is already coming. The world is in the midst of an AI revolution that is reshaping industries and economies, and the choice that remains is whether the state owns it or rents it.{{5}}",
@@ -59,7 +59,7 @@ export const article = {
       ]
     },
     {
-      "id": "v",
+      "id": "v", "title": "Belief in African Intelligence",
       "label": "V.",
       "paras": [
         "To build this, we first have to believe we are allowed to. We have, as a continent, and perhaps as a civilization, grown uncertain of what we believe and far too fearful of embracing any degree of specificity of our own, deferring instead to systems and standards built elsewhere, for someone else.",
@@ -70,7 +70,7 @@ export const article = {
       ]
     },
     {
-      "id": "vi",
+      "id": "vi", "title": "What We Are Building",
       "label": "VI.",
       "paras": [
         "Everything we build answers to one person: not the average user the frontier optimizes for, but the citizen those systems were never designed to serve, the edge case by the measure of a model trained on someone else's world. Lattanye makes possible quantifiable and transformative results for that human. Our agentic systems are inspired by reality, and there is, here, a dialectic between ground truth, tribal knowledge, and that edge-case person. The institutions that we serve, representing the durable, load-bearing infrastructure of our society, grasp this. They demand nothing less; they know society can afford nothing less.",
@@ -82,7 +82,7 @@ export const article = {
       ]
     },
     {
-      "id": "vii",
+      "id": "vii", "title": "The Future Is Intelligent",
       "label": "VII.",
       "paras": [
         "The next chapter belongs not to the critics and bystanders, those at the margins of creative empires, but to those who build them. The future belongs not to those who style themselves as creators, or even to the merely brave, but to those who actually build something substantial and lasting. The skeptics and cynics, those who doubt without putting anything at risk, and those who deride the work of others without even feigning to construct something of their own, will be swept aside.",

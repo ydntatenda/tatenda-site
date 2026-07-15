@@ -25,6 +25,29 @@ function Note({ n }: { n: number }) {
   );
 }
 
+function Linkified({ text }: { text: string }) {
+  const segs = text.split(/(Lattanye)/g);
+  return (
+    <Fragment>
+      {segs.map((seg, i) =>
+        seg === 'Lattanye' ? (
+          <a
+            key={i}
+            className="brand-link"
+            href="https://www.lattanye.group/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lattanye
+          </a>
+        ) : (
+          <Fragment key={i}>{seg}</Fragment>
+        )
+      )}
+    </Fragment>
+  );
+}
+
 function Para({ text }: { text: string }) {
   const parts = text.split(/(\{\{\d+\}\})/g);
   return (
@@ -40,7 +63,7 @@ function Para({ text }: { text: string }) {
             </Fragment>
           );
         }
-        return <Fragment key={i}>{part}</Fragment>;
+        return <Linkified key={i} text={part} />;
       })}
     </p>
   );
@@ -94,7 +117,7 @@ export default function ArticleView() {
               document.getElementById(s.id)?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            {s.label}
+            {(s as { title?: string }).title ?? s.label}
           </a>
         ))}
       </nav>
@@ -115,7 +138,11 @@ export default function ArticleView() {
 
         {article.sections.map((s) => (
           <section key={s.id} id={s.id} data-section={s.id}>
-            {s.label ? <h2 className="section-numeral">{s.label}</h2> : null}
+            {s.label ? (
+              <h2 className="section-numeral">
+                {(s as { title?: string }).title ?? s.label}
+              </h2>
+            ) : null}
             {s.paras.map((p, i) => (
               <Para key={i} text={p} />
             ))}
