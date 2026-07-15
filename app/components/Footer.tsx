@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
       <div className="footer-meta">
         <span className="footer-clock" suppressHydrationWarning>
-          {time ? `${time} · Atlanta, GA` : ''}
+          {time ? time : ''}
         </span>
         <span className="copyright">© 2026 Tatenda Ncube-Muchandibaya</span>
       </div>

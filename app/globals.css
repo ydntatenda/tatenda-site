@@ -385,3 +385,188 @@ main p + .domain {
 .domain + ul li:last-child {
   margin-bottom: 0;
 }
+
+
+/* ===== Article page ===== */
+
+.article-page {
+  position: relative;
+}
+
+/* On wide screens the article grid opens up: toc | body | sidenote margin */
+@media (min-width: 1240px) {
+  .article-page {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 640px) 300px;
+    gap: 48px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  /* the page main is already max-width 680 — widen for articles */
+  main:has(.article-page) {
+    max-width: 1240px;
+  }
+}
+
+/* TOC rail */
+.article-toc {
+  display: none;
+}
+
+@media (min-width: 1240px) {
+  .article-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    padding-top: 96px;
+  }
+}
+
+.article-toc a {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  color: #555555;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.article-toc a:hover {
+  color: #aaaaaa;
+}
+
+.article-toc a.active {
+  color: #ffffff;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.45);
+}
+
+/* Article body */
+.article-body {
+  min-width: 0;
+}
+
+.article-header {
+  margin: 0 0 48px;
+}
+
+.article-header h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fafafa;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+.article-meta {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  color: #7a7a7a;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.article-meta .dot {
+  color: #444444;
+}
+
+.article-body section {
+  margin-bottom: 8px;
+}
+
+.section-numeral {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fafafa;
+  letter-spacing: 0.02em;
+  margin: 48px 0 20px;
+}
+
+.article-body p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #c9c9c9;
+  margin: 0 0 22px;
+}
+
+/* Citation superscript */
+.cite {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 10px;
+  color: #8a8a8a;
+  margin-left: 1px;
+  cursor: default;
+}
+
+/* Sidenotes — float into the right rail on wide screens */
+.sidenote {
+  display: none;
+}
+
+@media (min-width: 1240px) {
+  .sidenote {
+    display: block;
+    float: right;
+    clear: right;
+    width: 300px;
+    margin-right: -348px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 1.65;
+    color: #7a7a7a;
+  }
+}
+
+/* On narrow screens, show the note inline as a quiet block */
+@media (max-width: 1239px) {
+  .sidenote {
+    display: block;
+    margin: 14px 0 18px;
+    padding: 12px 16px;
+    border-left: 1px solid #2a2a2a;
+    font-size: 12px;
+    line-height: 1.65;
+    color: #7a7a7a;
+  }
+}
+
+.sidenote-num {
+  color: #a0a0a0;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+}
+
+.sidenote a {
+  color: #9a9a9a;
+  text-decoration: none;
+  border-bottom: 0.5px solid #333333;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.sidenote a:hover {
+  color: #e5e5e5;
+  border-bottom-color: #888888;
+}
+
+/* Byline */
+.article-byline {
+  margin: 56px 0 24px;
+  padding-top: 28px;
+  border-top: 0.5px solid #1d1d1d;
+}
+
+.byline-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fafafa;
+}
+
+.byline-role {
+  font-size: 13px;
+  color: #7a7a7a;
+  margin-top: 4px;
+}
