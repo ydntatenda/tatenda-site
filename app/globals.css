@@ -397,14 +397,14 @@ main p + .domain {
 @media (min-width: 1240px) {
   .article-page {
     display: grid;
-    grid-template-columns: 170px minmax(0, 760px) 320px;
-    gap: 56px;
-    max-width: 1400px;
+    grid-template-columns: 200px minmax(0, 840px) 320px;
+    gap: 48px;
+    max-width: 1480px;
     margin: 0 auto;
   }
   /* the page main is already max-width 680 — widen for articles */
   main:has(.article-page) {
-    max-width: 1400px;
+    max-width: 1480px;
   }
 }
 
@@ -427,10 +427,12 @@ main p + .domain {
 
 .article-toc a {
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: #555555;
   text-decoration: none;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -479,18 +481,20 @@ main p + .domain {
 }
 
 .section-numeral {
-  font-size: 16px;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
   font-weight: 500;
   color: #fafafa;
-  letter-spacing: 0.02em;
-  margin: 48px 0 20px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 56px 0 24px;
 }
 
 .article-body p {
-  font-size: 17px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.75;
   color: #c9c9c9;
-  margin: 0 0 24px;
+  margin: 0 0 26px;
 }
 
 /* Citation superscript */
@@ -570,4 +574,18 @@ main p + .domain {
   font-size: 13px;
   color: #7a7a7a;
   margin-top: 4px;
+}
+
+
+/* Lattanye mentions inside the article */
+.article-body p a.brand-link {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 0.5px solid #3a3a3a;
+  transition: border-color 0.2s ease;
+}
+
+.article-body p a.brand-link:hover {
+  border-bottom-color: #aaaaaa;
 }
