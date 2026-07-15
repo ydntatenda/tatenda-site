@@ -397,8 +397,8 @@ main p + .domain {
 @media (min-width: 1240px) {
   .article-page {
     display: grid;
-    grid-template-columns: 200px minmax(0, 840px) 320px;
-    gap: 48px;
+    grid-template-columns: 200px minmax(0, 960px) 200px;
+    gap: 44px;
     max-width: 1480px;
     margin: 0 auto;
   }
@@ -481,12 +481,10 @@ main p + .domain {
 }
 
 .section-numeral {
-  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 500;
   color: #fafafa;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 56px 0 24px;
 }
 
@@ -516,12 +514,12 @@ main p + .domain {
     display: block;
     float: right;
     clear: right;
-    width: 320px;
-    margin-right: -376px;
-    margin-bottom: 18px;
-    font-size: 12px;
-    line-height: 1.65;
-    color: #7a7a7a;
+    width: 200px;
+    margin-right: -244px;
+    margin-bottom: 16px;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #6f6f6f;
     text-align: center;
   }
 }
