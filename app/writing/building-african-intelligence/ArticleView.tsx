@@ -132,7 +132,7 @@ export default function ArticleView() {
           <div className="article-meta">
             <span>2026</span>
             <span className="dot">·</span>
-            <span>16 min</span>
+            <span>7 min</span>
           </div>
         </header>
 

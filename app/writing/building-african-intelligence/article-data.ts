@@ -1,5 +1,5 @@
 export const article = {
-  "title": "African intelligence",
+  "title": "Building African Intelligence",
   "byline": [
     "Tatenda Ncube-Muchandibaya",
     "Founder & CEO, Lattanye"
@@ -13,7 +13,7 @@ export const article = {
         "The more familiar path for today's startups, in seeking the affection and capital of the Valley, has been to build enterprise or consumer products. To build for the West. We declined to take this approach.",
         "As a result, we continue to face firm questions about the potential profitability and, indeed more fundamentally, the wisdom of our approach. Others are skeptical of what some, not incorrectly, describe as a nonexistent market for artificial intelligence systems.",
         "It is a market they cannot see because they are measuring the wrong thing. Africa has the fastest-growing population in the world. A continent where the median age is barely 20, with more than 60% below 25.{{1}} And with or without invitation, the numbers are simply hard to ignore.",
-        "The question is not whether intelligence comes to this continent. It is who owns it when it arrives. I have no doubt that competent leaders of government and enterprise will, over time, choose sovereign AI over generalized LLMs. That, coupled with a large untapped African market, sets up Lattanye as the pioneer of something special. An understanding of where intelligence creates value, the limits of generalized models, and the future of African Intelligence makes this outcome not merely possible, but necessary."
+        "The question is not whether intelligence comes to this continent. It is who owns it when it arrives. I have no doubt that competent leaders of government and enterprise will, over time, choose sovereign AI over generalized LLMs. That, coupled with a large untapped African market, sets up Lattanye as the pioneer of something special. An understanding of where intelligence creates value, the limits of generalized models, and the future of African intelligence makes this outcome not merely possible, but necessary."
       ]
     },
     {
