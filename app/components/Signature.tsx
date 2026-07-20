@@ -49,7 +49,7 @@ export default function Signature() {
         }
         src="/signature.svg"
         alt="Tatenda Ncube-Muchandibaya signature"
-        style={{ filter: 'invert(0.55)' }}
+        style={{ filter: 'invert(0.15)' }}
       />
     </div>
   );

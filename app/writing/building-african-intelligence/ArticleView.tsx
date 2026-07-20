@@ -124,7 +124,11 @@ export default function ArticleView() {
 
       <article className="article-body" id="top">
         <div className="backlink">
-          <a href="/">home</a>
+          <a href="/">
+            <span className="slash">/</span>
+            <span className="arrow">&#8592;</span>
+            <span className="label">home</span>
+          </a>
         </div>
 
         <header className="article-header">
