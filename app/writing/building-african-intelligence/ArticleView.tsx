@@ -85,7 +85,7 @@ export default function ArticleView() {
           }
         });
       },
-      { rootMargin: '-30% 0px -60% 0px' }
+      { rootMargin: '-15% 0px -70% 0px', threshold: 0 }
     );
 
     sections.forEach((s) => observer.observe(s));
