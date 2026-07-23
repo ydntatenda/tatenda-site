@@ -1,13 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Newsreader } from 'next/font/google';
+import { Inter, EB_Garamond } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const newsreader = Newsreader({
+const garamond = EB_Garamond({
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  variable: '--font-newsreader'
+  variable: '--font-garamond'
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${inter.variable} ${garamond.variable}`}>
       <body>
         <main>{children}</main>
         <Analytics />
