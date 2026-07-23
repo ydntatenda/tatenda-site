@@ -488,12 +488,12 @@ main p + .domain {
 }
 
 .article-header h1 {
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: 40px;
-  font-weight: 500;
+  font-family: var(--font-garamond), Georgia, serif;
+  font-size: 44px;
+  font-weight: 600;
   color: #1a1a1a;
-  letter-spacing: -0.015em;
-  line-height: 1.1;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
   margin: 0 0 16px;
 }
 
@@ -515,21 +515,21 @@ main p + .domain {
 }
 
 .section-numeral {
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: 22px;
+  font-family: var(--font-garamond), Georgia, serif;
+  font-size: 24px;
   font-weight: 600;
   color: #1a1a1a;
   letter-spacing: 0;
-  margin: 56px 0 22px;
+  margin: 56px 0 20px;
 }
 
 .article-body p {
-  font-family: var(--font-newsreader), Georgia, serif;
-  font-size: 20px;
-  line-height: 1.7;
+  font-family: var(--font-garamond), Georgia, serif;
+  font-size: 22px;
+  line-height: 1.65;
   color: #242424;
-  margin: 0 0 28px;
-  letter-spacing: -0.003em;
+  margin: 0 0 26px;
+  letter-spacing: 0;
 }
 
 /* Citation superscript */
@@ -600,7 +600,7 @@ main p + .domain {
 }
 
 .byline-name {
-  font-family: var(--font-newsreader), Georgia, serif;
+  font-family: var(--font-garamond), Georgia, serif;
   font-size: 17px;
   font-weight: 600;
   color: #1a1a1a;
