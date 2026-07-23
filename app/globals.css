@@ -17,7 +17,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.01em;
@@ -441,7 +441,7 @@ main p + .domain {
 
 .article-toc a {
   position: relative;
-  padding-left: 18px;
+  padding-left: 26px;
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 11px;
   color: #b3afa5;
@@ -456,13 +456,12 @@ main p + .domain {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.45em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1.5px solid transparent;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  top: 0.62em;
+  width: 0;
+  height: 1.5px;
+  background: #111111;
+  opacity: 0;
+  transition: width 0.28s cubic-bezier(0.2, 0.6, 0.2, 1), opacity 0.28s ease;
 }
 
 .article-toc a:hover {
@@ -475,10 +474,8 @@ main p + .domain {
 }
 
 .article-toc a.active::before {
-  background: #111111;
-  border-color: #111111;
-  transform: scale(1.3);
-  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
+  width: 18px;
+  opacity: 1;
 }
 
 /* Article body */
@@ -491,12 +488,13 @@ main p + .domain {
 }
 
 .article-header h1 {
-  font-size: 32px;
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 40px;
   font-weight: 500;
   color: #1a1a1a;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 14px;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0 0 16px;
 }
 
 .article-meta {
@@ -517,18 +515,21 @@ main p + .domain {
 }
 
 .section-numeral {
-  font-size: 17px;
-  font-weight: 500;
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
   color: #1a1a1a;
-  letter-spacing: 0.02em;
-  margin: 56px 0 24px;
+  letter-spacing: 0;
+  margin: 56px 0 22px;
 }
 
 .article-body p {
-  font-size: 18px;
-  line-height: 1.75;
-  color: #2a2a2a;
-  margin: 0 0 26px;
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #242424;
+  margin: 0 0 28px;
+  letter-spacing: -0.003em;
 }
 
 /* Citation superscript */
@@ -599,8 +600,9 @@ main p + .domain {
 }
 
 .byline-name {
-  font-size: 15px;
-  font-weight: 500;
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
   color: #1a1a1a;
 }
 
